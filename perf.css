@@ -3,6 +3,7 @@ body {
 	color: #8F938F;
 	font-family: monospace;
 }
+a { color: #EDE6E6; }
 #container {
 	width: 940px;
 	margin:30px auto;
