@@ -1,0 +1,35 @@
+body {
+	background-color: #2C2828;
+	color: #8F938F;
+	font-family: monospace;
+}
+a { color: #EDE6E6; }
+#container {
+	width: 940px;
+	margin:30px auto;
+}
+#testLog {
+	padding: 0 0 0 60px;
+	background-color: #322F2F;
+}
+#testLog li {
+	list-style-position: outside;
+	padding: 0 10px;
+	margin: 0 0 -1px 0;
+	border-bottom: 1px solid #322F2F;
+	border-top: 1px solid #322F2F;
+	line-height: 30px;
+	font-size: 14px;
+	background-color: #2C2828;
+}
+#testLog .testName { color: #83E7FF; }
+#testLog .time {
+	color: #88F581;
+	float: right;
+}
+.alert { color: #E5C854; }
+.error { background-color: #BB5233 !important; color: #fff; }
+.note { color: #DA66ED; }
+.result { background-color: #1D1D1D !important; color: #B2F063; }
+
+#testDom { visibility: hidden; }
