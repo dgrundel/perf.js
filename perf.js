@@ -73,12 +73,16 @@ perf.prototype.run = function() {
 }
 
 perf.log = function(message, cssClass) {
-	var messageNode = document.createElement('li');
-	if(cssClass) {
-		messageNode.className = cssClass;
+	if(perf.config.logNode) {
+		var messageNode = document.createElement('li');
+		if(cssClass) {
+			messageNode.className = cssClass;
+		}
+		messageNode.innerHTML = (message + '').replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+		perf.config.logNode.appendChild(messageNode);
+	} else if(window.console && console.log) {
+		console.log( (cssClass ? cssClass + ': ' : '') + message);
 	}
-	messageNode.innerHTML = (message + '').replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
-	perf.config.logNode.appendChild(messageNode);
 
 	return this;
 }
