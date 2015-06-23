@@ -80,8 +80,6 @@ perf.log = function(message, cssClass) {
 		}
 		messageNode.innerHTML = (message + '').replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
 		perf.config.logNode.appendChild(messageNode);
-	} else if(window.console && console.log) {
-		console.log( (cssClass ? cssClass + ': ' : '') + message);
 	}
 
 	return this;
